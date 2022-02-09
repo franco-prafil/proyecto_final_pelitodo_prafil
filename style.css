@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    }
+
+
+nav{
+    padding: 10px;
+
+} 
+
+.bg-light{
+    background-color: #093258 !important;
+}     
+
+body{
+    background: rgb(77,77,77);
+    background: linear-gradient(0deg, rgba(77,77,77,0.9026961126247374) 0%, rgba(23,75,123,1) 85%);
+}
+
+footer{
+    background-color: #093258;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+}
+/* LI */
+li{
+    border-radius: 3px;
+}
+
+li:hover {
+    background-color: #4175A5;
+}
+
+/* MODIF EN LOS A */
+a{
+    color: azure !important;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover{
+    color: black;
+}
+/* MODIF EN CLASS IMG-FLUID */
+.img-fluid{
+    height: 100% !important;
+}
+
+/* MODIF EN ETIQUETA ROW */
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    --bs-gutter-y: 1.5rem !important;
+}
+
+/* TITULOS */
+.h1Titulo{
+    padding: 12px 0px 12px 0px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-size: 38px;
+}
+.h2Titulos{
+    padding: 10px;
+}
+
+/* H2 TITULOS SECCIONES */
+.h2TitulosSecciones{
+    padding: 40px 10px 10px 10px;
+}
+
+.my-4{
+    margin-bottom: 0 !important;
+}
+/* INICIO SECCION CONTACTO */
+.contenedorContacto{
+    padding: 100px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    color: white;
+}
+/* FIN DE CONTACTO */
