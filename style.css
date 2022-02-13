@@ -11,6 +11,14 @@ nav{
 
 } 
 
+.menuAnimado:hover {
+    display: inline-block;
+    /* margin:  0.1em; */
+
+    animation: bounce;
+    animation-duration: 1s;
+}
+
 .bg-light{
     background-color: #093258 !important;
 }     
@@ -27,8 +35,11 @@ footer{
 ul {
     list-style-type: none;
     width: 100%;
-    height: 10vh;
     justify-content: space-between;
+}
+
+.navFooter{
+    height: 10vh;
 }
 /* LI */
 li{
@@ -52,6 +63,14 @@ a:hover{
 /* MODIF EN CLASS IMG-FLUID */
 .img-fluid{
     height: 100% !important;
+}
+
+.imgAnimada:hover {
+    display: inline-block;
+    margin: 0 0.2rem;
+
+    animation: headShake;
+    animation-duration: 1s;
 }
 
 /* MODIF EN ETIQUETA ROW */
