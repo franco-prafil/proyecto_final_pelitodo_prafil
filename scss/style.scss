@@ -6,7 +6,9 @@
     }
 
 // IMPORT
-@import "colores";
+// @import "colores";
+@import "mixin";
+@import "maps";
 
 
 
@@ -27,21 +29,21 @@ nav{
 }
 
 .bg-light{
-    background-color: $fondoUno !important;
-}     
+    background-color: map-get($colores , fondoUno ) !important;
+}  
 
 body{
-    background: $fondoDos;
-    background: $gradUno;
+    background: map-get($colores, fondoDos);
+    background: map-get($colores, gradUno);
 }
 
 footer{
-    background-color: $fondoUno;
+    background-color: map-get($colores, fondoUno);;
 }
 
 ul {
     list-style-type: none;
-    width: 100%;
+    @include tamanio (100%);
     justify-content: space-between;
 }
 
@@ -52,18 +54,15 @@ ul {
 /* LI */
 li{
     border-radius: 3px;
-    &:hover{
-        background-color: $colorUno;
-    }
 }
 
 /* MODIF EN LOS A */
 a{
-    color: $colorDos !important;
+    color: map-get($colores , colorDos) !important;
     text-decoration: none;
     padding: 5px;
     &:hover{
-        color: $colorTres;
+        color: map-get($colores , colorTres) !important;
     }
 }
 
@@ -92,7 +91,7 @@ a{
 /* TITULOS */
 .h1Titulo{
     padding: 12px 0px 12px 0px;
-    width: 30%;
+    @include tamanio (30%);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -100,12 +99,13 @@ a{
     font-size: 38px;
 }
 .h2Titulos{
-    padding: 10px;
+    padding: 30px 10px 10px 10px;
 }
 
 /* H2 TITULOS SECCIONES */
 .h2TitulosSecciones{
-    padding: 40px 10px 10px 10px;
+    @extend .h2Titulos;
+    color: white;
 }
 
 .my-4{
@@ -121,6 +121,6 @@ a{
     align-items: center;
 }
 label{
-    color: $colorCuatro;
+    color: map-get($colores , colorCuatro);
 }
 /* FIN DE CONTACTO */
