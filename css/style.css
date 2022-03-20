@@ -10,9 +10,13 @@ nav {
   padding: 10px;
 }
 
+.colorCaptionCarrusel{
+  background-color: black;
+  opacity: 80%;
+}
+
 .menuAnimado:hover {
   display: inline-block;
-  /* margin:  0.1em; */
   animation: bounce;
   animation-duration: 1s;
 }
@@ -24,6 +28,11 @@ nav {
 body {
   background: #4d4d4d;
   background: linear-gradient(0deg, rgba(77, 77, 77, 0.9026961126) 0%, #174b7b 85%);
+}
+
+.sectionContainer{
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 footer {
@@ -55,24 +64,87 @@ a:hover {
   color: #5f80ba !important;
 }
 
+
+/* IMAGENES PELICULAS */
+.div-imagen{
+  display: inline-block;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.div-imagen>div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 10px;
+  margin: 0;
+  color: #fff;
+  opacity: 1;
+}
+
+.div-imagen>div>h3{
+  text-align: center;
+}
+.div-imagen>div>p{
+  text-align: start;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 0.8rem;
+}
+.desvanecer:hover{
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+
 /* MODIF EN CLASS IMG-FLUID */
 .img-fluid {
   height: 100% !important;
 }
 
+/* ANIMACIÓN IMAGENES */
 .imgAnimada:hover {
-  display: inline-block;
-  margin: 0 0.2rem;
-  animation: headShake;
-  animation-duration: 1s;
+  transform: scale(1.1);
+  transition: 0.2s;
+  transform-origin: center;
 }
+
+
+/* MODIF EN ETIQUETA COL-2 */
+.col-2{
+  width: 20% !important;
+}
+
 
 /* MODIF EN ETIQUETA ROW */
 .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
   --bs-gutter-y: 1.5rem !important;
+  justify-content: space-around;
 }
+
+.row>*{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.rowSinPadding{
+  margin-right: calc(var(--bs-gutter-x) * .5);
+  margin-left: calc(var(--bs-gutter-x) * .5);
+}
+
+
+/* MODIF EN P */
+p{
+  margin-bottom: 0 !important;
+}
+.pSize{
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+}
+
+
 
 /* TITULOS */
 .h1Titulo {
@@ -82,11 +154,18 @@ a:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  font-size: 38px;
+  font-size: 3em;
+}
+
+.h2Container{
+  font-size: 22px;
+  background: #0c3c6b;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .h2Titulos, .h2TitulosSecciones {
-  padding: 30px 10px 10px 10px;
+  padding: 5px;
 }
 
 /* H2 TITULOS SECCIONES */
@@ -94,9 +173,31 @@ a:hover {
   color: white;
 }
 
+/* H2 TITULOS CARRUSEL */
+.h2Carrusel{
+  font-size: 1rem !important;
+  color: #5f80ba;
+}
+
+/* H3 IMAGENES */
+.h3Peliculas{
+  font-size: 1rem;
+  color: rgb(45, 95, 142);
+}
+
+/* H4 IMAGENES */
+.h4Peliculas{
+  padding: 10px;
+  font-size: 0.7rem;
+  text-align: start;
+  color: rgb(123, 123, 123);
+}
+
+/* TITULOS MINIATURA */
 .my-4 {
   margin-bottom: 0 !important;
 }
+
 
 /* INICIO SECCION CONTACTO */
 .contenedorContacto {
@@ -114,4 +215,89 @@ label {
 
 /* FIN DE CONTACTO */
 
-/*# sourceMappingURL=style.css.map */
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 480px){
+  .h1Titulo{
+    font-size: 2em;
+  }
+
+  .h2Container{
+    font-size: 16px;
+  }
+
+  .h2Titulos, .h2TitulosSecciones {
+    padding: 3px;
+  }
+  
+
+  .pMobile{
+    display: none;
+  }
+
+  .h3Peliculas{
+
+    font-size: 9px;
+  }
+
+  .h4Peliculas{
+    font-size: 6px;
+    padding: 1px 1px 0 1px;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 1023px){
+  .h1Titulo{
+    font-size: 2.5em;
+  }
+
+  .h2Container{
+    font-size: 19px;
+  }
+
+  .h2Titulos, .h2TitulosSecciones {
+    padding: 5px;
+  }
+
+  h3{
+    margin-bottom: .1rem;
+  }
+  .h3Peliculas{
+    font-size: 9px;
+  }
+
+  .h4Peliculas{
+    font-size: 5px;
+    padding: 4px 4px 0 4px;
+  }
+
+  .div-imagen>div>p{
+    text-align: start;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 5px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .h3Peliculas{
+    font-size: 0.9rem;
+  }
+
+  .h4Peliculas{
+    font-size: 0.6rem;
+  }
+  
+  .div-imagen>div>p{
+    text-align: start;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.6rem;
+  }
+}
+
